@@ -363,7 +363,7 @@ project(':cruise-control') {
   compileScala.finalizedBy(tasks.copyDependantLibs)
 
   task determineCommitId {
-    commitId = "6584fe2198a26b2abd321338670d38e19d02887a"
+    commitId = "4d7fe492d00a6d2ff8c5bfb6706720c2b6076adc"
   }
 
   // Referenced similar method for getting software version in Kafka code.
