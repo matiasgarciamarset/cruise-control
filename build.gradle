@@ -39,7 +39,7 @@ project.ext {
       }
     }
     scm {
-      url "https://github.com/linkedin/cruise-control"
+      url "https://github.com/matiasgarciamarset/cruise-control"
     }
   }
   buildVersionFileName = "cruise-control-version.properties"
@@ -366,8 +366,8 @@ project(':cruise-control') {
     def takeFromHash = 40
     if (commitId) {
       commitId = commitId.take(takeFromHash)
-    } else if (file("$rootDir/.git/2.5.123").exists()) {
-      def headRef = file("$rootDir/.git/2.5.123").text
+    } else if (file("$rootDir/.git/HEAD").exists()) {
+      def headRef = file("$rootDir/.git/HEAD").text
       if (headRef.contains('ref: ')) {
         headRef = headRef.replaceAll('ref: ', '').trim()
         if (file("$rootDir/.git/$headRef").exists()) {
