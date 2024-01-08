@@ -17,7 +17,7 @@ group = 'com.linkedin.cruisecontrol'
 
 project.ext {
   pomConfig = {
-    url "https://github.com/linkedin/cruise-control"
+    url "https://github.com/matiasgarciamarset/cruise-control"
     licenses {
       license {
         name "BSD 2-CLAUSE LICENSE"
