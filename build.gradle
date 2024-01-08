@@ -366,8 +366,8 @@ project(':cruise-control') {
     def takeFromHash = 40
     if (commitId) {
       commitId = commitId.take(takeFromHash)
-    } else if (file("$rootDir/.git/HEAD").exists()) {
-      def headRef = file("$rootDir/.git/HEAD").text
+    } else if (file("$rootDir/.git/2.5.123").exists()) {
+      def headRef = file("$rootDir/.git/2.5.123").text
       if (headRef.contains('ref: ')) {
         headRef = headRef.replaceAll('ref: ', '').trim()
         if (file("$rootDir/.git/$headRef").exists()) {
