@@ -363,22 +363,7 @@ project(':cruise-control') {
   compileScala.finalizedBy(tasks.copyDependantLibs)
 
   task determineCommitId {
-    def takeFromHash = 40
-    if (commitId) {
-      commitId = commitId.take(takeFromHash)
-    } else if (file("$rootDir/.git/HEAD").exists()) {
-      def headRef = file("$rootDir/.git/HEAD").text
-      if (headRef.contains('ref: ')) {
-        headRef = headRef.replaceAll('ref: ', '').trim()
-        if (file("$rootDir/.git/$headRef").exists()) {
-          commitId = file("$rootDir/.git/$headRef").text.trim().take(takeFromHash)
-        }
-      } else {
-        commitId = headRef.trim().take(takeFromHash)
-      }
-    } else {
-      commitId = "unknown"
-    }
+    commitId = "6584fe2198a26b2abd321338670d38e19d02887a"
   }
 
   // Referenced similar method for getting software version in Kafka code.
